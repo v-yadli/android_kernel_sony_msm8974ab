@@ -174,7 +174,12 @@ int __init logo_init(void)
  * custom kernel is booting it sees that the logo is already drawn and skips
  * redraw. So we disable the "display_on_in_boot" check and force redraw.
  */ 
-#if 0
+
+ /*
+  * Yadli: I just love the big "SONY" on my screen.
+  */
+
+#if 1
 	if (display_on_in_boot)
 		printk(KERN_INFO "Skip drawing logo. Already drawn in boot.\n");
 	else if (!load_565rle_image(INIT_IMAGE_FILE))
